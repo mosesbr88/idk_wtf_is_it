@@ -21,11 +21,6 @@ app.get('/webhook', (req, res) => {
 });
 
 
-app.get("/webhook", (req, res) => {
-  console.log("tex");
-  res.send(true);
-});
-
 
 app.post('/webhook', (req, res) => {
   console.log('Received:', JSON.stringify(req.body, null, 2));
