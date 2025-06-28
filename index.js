@@ -6,6 +6,12 @@ app.use(express.json());
 
 //const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
+app.use((req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
+
+
 // Webhook verification
 app.get('/webhook', (req, res) => {
   console.log("Got /webhook");
